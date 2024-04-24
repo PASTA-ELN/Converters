@@ -1,5 +1,5 @@
 # Converters
-Converters from binary files to hdf5
+Converters from binary files to hdf5 / nexus format
 
 Some people call it **Extractor**, **Translator**
 
@@ -7,6 +7,17 @@ The idea is to have a most literal translation without tranformation, i.e. from 
 
 # List
 - Doli - Test&Motion software
+- Fischer Scope Indenter
+- KLA G200X Nanoindenter
+
+
+# What to do after the first submit
+- add to above list
+- add converter to own repository and use a main function
+- add example files to own repository
+- add yml files for filetype
+- append to extractor.yml file
+- append to pyproject.toml file
 
 # How to create this repository
 ## add your python file and example file

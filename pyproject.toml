@@ -27,6 +27,8 @@ Repository = "https://github.com/PASTA-ELN/Converters"
 
 [project.scripts]
 converter_mvl = "converter_mvl:main"
+converter_hap = "converter_hap:main"
+converter_nmd = "converter_nmd:main"
 
 [tool.setuptools.packages.find]
 where = ["converter"]
