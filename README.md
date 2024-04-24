@@ -12,12 +12,18 @@ The idea is to have a most literal translation without tranformation, i.e. from 
 
 
 # What to do after the first submit
+## Update this repository
 - add to above list
 - add converter to own repository and use a main function
 - add example files to own repository
 - add yml files for filetype
 - append to extractor.yml file
 - append to pyproject.toml file
+## Update yadg
+- copy extractor.py
+- copy all filetype files
+- copy all example files
+
 
 # How to create this repository
 ## add your python file and example file
