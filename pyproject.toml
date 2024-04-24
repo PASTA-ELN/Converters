@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name = "pasta-converters"
+authors = [
+    {name = "Steffen Brinckmann"},
+]
+maintainers = [
+    {name = "Steffen Brinckmann"},
+]
+description = ""
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+]
+requires-python = ">= 3.9"
+dependencies = [
+    "h5py",
+]
+
+[project.urls]
+Issues = "https://github.com/PASTA-ELN/Converters/issues"
+Repository = "https://github.com/PASTA-ELN/Converters"
+
+[project.scripts]
+converter_mvl = "converter_mvl:main"
+
+[tool.setuptools.packages.find]
+where = ["converter"]
