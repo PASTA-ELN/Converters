@@ -11,7 +11,7 @@ authors = [
 maintainers = [
     {name = "Steffen Brinckmann"},
 ]
-description = ""
+description = "Converters for mechanical testing and micromechanics"
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3.9",

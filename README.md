@@ -60,4 +60,5 @@ in yard folder
 
 change to "base repository"=datatractor/yard on Github during creation of PR
 
+- Add to pyproject.toml in [project.scripts] section at end
 
