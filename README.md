@@ -10,62 +10,55 @@ The idea is to have a most literal translation without tranformation, i.e. from 
 - Fischer Scope Indenter
 - KLA G200X Nanoindenter
 
+# Links
+This repo was created to participate in the datatractor
+https://github.com/datatractor/yard which shows the converters on
+https://yard.datatractor.org/ while also having an API endpoint.
 
-# What to do after the first submit
+# How to add another converters
 ## Update this repository
-- add to above list
-- add converter to own repository and use a main function
-- add example files to own repository
-- add yml files for filetype
-- append to extractor.yml file
-- append to pyproject.toml file
-## Update yadg
+- add to above list in Readme file
+- add converter to this repository and ensure that a main function exists
+- add example files to this repository
+- add yml file for filetype
+- append to extractor.yml file (all extractors of one repo are in one file)
+- append extractor command to pyproject.toml file in [project.scripts] section at end
+
+## Update your yadg fork
 - copy extractor.py
 - copy all filetype files
 - copy all example files
+- create a pull request
 
+# How and why I created this repository
+Datatractor requires that the extractor is installable, for instance via pip. This way a virtual environment can
+be created and everything run there. Pip allows the specification of a repository "pip install git+https:\\github..."
+without need for a pypi package. This repository just needs things to create a package: pyproject.toml
 
-# How to create this repository
-## add your python file and example file
+## Create file structure
 .
 ├── converter
 │   └── converter_mvl.py
 ├── example_files
 │   └── Membrane2_03.mvl
+├── marda_yml
+│   ├── extractors
+│   │   └── pasta-converters.yml
+│   └── filetypes
+│       └── doli-mvl.yml
 ├── LICENSE
 ├── README.md
-└── pyproject.toml
-
-Copy pyproject.toml from here
-
-## Test and create requirements.txt
-- Test current version: converter should have a main function which is called
-  "python converter/converter_mvl.py example_files/Membrane2_03.mvl"
-- Create venv and activate
-  "python -m venv venv"
-  ". ./venv/bin/activate"
-- Add venv to .gitignore
-  "cat > .gitignore"
-- Create requirements file, install it and test
-  "touch requirements.txt"
-  "pip install -r requirements.txt"
-  "python converter/converter_mvl.py example_files/Membrane2_03.mvl"
-
-## Final structure
-- test in empty environment
-.
-├── converter
-│   └── converter_mvl.py
-├── example_files
-│   ├── Membrane2_03.hdf5
-│   └── Membrane2_03.mvl
-├── LICENSE
-├── README.md
-├── pyproject.toml
+├── .gitignore       (exclude all files you don't need)
+├── pyproject.toml   (can copy from here and adopt)
 └── requirements.txt
 
-Append to pyproject.toml in [project.scripts] section at end
-- to change to these type of extractor
+## Test and create requirements.txt
+Create venv and activate
+
+  "python -m venv venv"
+  ". ./venv/bin/activate"
+  "pip install -r requirements.txt"
+  "python converter/converter_mvl.py example_files/Membrane2_03.mvl"
 
 # How to add these converters to the MARDA - YARD repository
 ## Create my own fork on github in a totally separate folder
